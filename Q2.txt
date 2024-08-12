@@ -1,0 +1,76 @@
+Q2
+a. ip domain-name ccna.com
+c. vlan 10
+   name staff
+   exit
+
+   vlan 20
+   name student
+   exit
+   vlan 30    vlan 99    vlan 150
+
+d-e.
+  interface f0/1
+  switchport mode access
+  switchport access vlan 10
+
+ interface f0/11
+  switchport mode access
+  switchport access vlan 20
+
+interface f0/21 
+  switchport mode access
+  switchport access vlan 30
+
+interface f0/24
+  switchport mode access
+  switchport access vlan 99
+
+
+S3 ---interface s0/1
+    switchport mode access
+    switchport access vlan 10
+
+   interface f0/11
+    switchport mode access
+    switchport access vlan 20
+
+   interface f0/21 
+   switchport mode access
+  switchport access vlan 30
+
+  interface f0/24
+  switchport mode access
+  switchport access vlan 99
+
+
+ interface f0/1
+ mls qos trust ssh
+ switchport vioce vlan 150
+
+g- ping (ip address)
+
+h. interface range g0/1.2     (S1.S2,S3)
+   switchport mode trunk
+   switchport native vlan 99
+
+j. do show vlan brief
+
+k. usename root secrect cisco 
+   crypto key generate rsa
+   line vty 0 15
+
+   tranport input ssh
+   login local
+   exec-timeout 6
+
+  copy run start 
+
+
+
+   
+
+
+
+
+
